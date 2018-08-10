@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>加载图片测网速</title>
+</head>
+<body>
+  <script>
+    var img = new Image();
+    var startTime = new Date();
+    img.src="https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg";//已知图片6kb
+    img.onload = function(){
+      var endTime = new Date();
+      var speed = 6/(endTime-startTime);
+      alert("当前网速："+speed.toFixed(2)+"kb/s");//当前网速：0.21kb/s
+    }
+  </script>
+</body>
+</html>

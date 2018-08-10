@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>正方体</title>
+</head>
+<style>
+  .box {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 80px auto;
+    /* perspective: 160px; */
+    transform-style: preserve-3d;
+    animation: rotateCube 5s ease-in-out infinite;
+  }
+
+  .square {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 80px;
+    text-align: center;
+    opacity: 0.2;
+  }
+
+  .A {
+    background: #FFC0CB;
+    transform: translateZ(-40px);
+  }
+
+  .B {
+    background: #DDA0DD;
+    transform: translateZ(40px);
+  }
+
+  .C {
+    background: #9370DB;
+    transform: rotateY(90deg) translateZ(-40px);
+  }
+
+  .D {
+    background: #87CEFA;
+    transform: rotateY(90deg) translateZ(40px);
+  }
+
+  .E {
+    background: #FFEBCD;
+    transform: rotateX(90deg) translateZ(40px);
+  }
+
+  .F {
+    background: #F08080;
+    transform: rotateX(90deg) translateZ(-40px);
+  }
+
+  @keyframes rotateCube {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+</style>
+
+<body>
+  <div class="box">
+    <div class="square A">A</div>
+    <div class="square B">B</div>
+    <div class="square C">C</div>
+    <div class="square D">D</div>
+    <div class="square E">E</div>
+    <div class="square F">F</div>
+  </div>
+</body>
+
+</html>

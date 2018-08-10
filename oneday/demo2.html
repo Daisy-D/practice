@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>利用图片上报数据</title>
+</head>
+<body>
+  <script>
+    var img = new Image()
+    //引入跨域的脚本，如果这个脚本有错误，因为浏览器的限制（根本原因是协议的规定），是拿不到错误信息的。
+    //当本地尝试使用 window.onerror 去记录脚本的错误时，跨域脚本的错误只会返回 Script error.
+    //但 HTML5 新的规定，是可以允许本地获取到跨域脚本的错误信息，
+    //但有两个条件：一是跨域脚本的服务器必须通过 Access-Controll-Allow-Origin 头信息允许当前域名可以获取错误信息，
+    //二是当前域名的 script 标签也必须指明 src 属性指定的地址是支持跨域的地址，也就是 crossorigin 属性
+    img.crossOrigin = "anonymous"//支持跨域
+    img.src = "https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg?aaa='111'&bbb='222'"  
+  </script>
+</body>
+</html>
