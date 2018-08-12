@@ -9,7 +9,6 @@ for (var i = 0; i < rectangleLength; i++) {
 	rectangle[i].style.transform = 'rotateY(' + angle * i + 'deg) translateZ(' + distance + 'px)'
 }
 
-
 var startX = 0,
 	moveX = 0,
 	endX = 0;
@@ -31,10 +30,10 @@ $('#box').on('touchmove', function (event) {
 		moveX = startX - endX;
 		endY = touch.pageY;
 		moveY = endY - startY;
-		if (moveY >= 20) {
-			moveY = 20;
-		} else if (moveY <= -20) {
-			moveY = -20;
+		if (moveY >= 25) {
+			moveY = 25;
+		} else if (moveY <= -30) {
+			moveY = -30;
 		}
 		box.style.transform = 'rotateX(' + moveY + 'deg) rotateY(' + moveX + 'deg)';
 	} else {

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>雨伞</title>
+  <style>
+    .umbrella {
+      width: 400px;
+      height: 200px;
+      margin: 80px auto;
+      background: radial-gradient(100% 200% at 50% 100%, red 50%, transparent 50.25%)center 0px/35% no-repeat,
+      radial-gradient(100% 200% at 50% 100%, #f1f1f1 50%, transparent 50.25%)center 0px/70% no-repeat,
+      radial-gradient(100% 200% at 50% 100%, red 50%, transparent 50.25%)center 0px/100% no-repeat;
+      /* radial-gradient(渐变尺寸X 渐变尺寸Y at 渐变圆心X 渐变圆心Y, 渐变颜色 渐变结点,...,) 背景positionX 背景positionY/背景size 是否平铺*/
+      position: relative;
+    }
+
+    .umbrella::before {
+      content: '';
+      width: 10px;
+      height: 20px;
+      position: absolute;
+      top: -20px;
+      left: 195px;
+      border-radius: 50%;
+      background: burlywood;
+    }
+
+    .umbrella::after {
+      content: '';
+      position: absolute;
+      left: 195px;
+      bottom: -300px;
+      width: 10px;
+      height: 300px;
+      border-radius: 0 0 5px 5px;
+      background: burlywood;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="umbrella"></div>
+</body>
+
+</html>
