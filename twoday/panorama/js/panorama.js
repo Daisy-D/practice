@@ -31,18 +31,15 @@ $('#box').on('touchmove', function (event) {
 		moveX = startX - endX;
 		endY = touch.pageY;
 		moveY = endY - startY;
+		if (moveY >= 20) {
+			moveY = 20;
+		} else if (moveY <= -20) {
+			moveY = -20;
+		}
 		box.style.transform = 'rotateX(' + moveY + 'deg) rotateY(' + moveX + 'deg)';
 	} else {
 		return false;
 	}
 })
 
-window.addEventListener('deviceorientation', function (event) {
-	var gamma = event.gamma;
-	if (Math.abs(gamma) > 1) {
-		flag = false;
-		box.style.transform = 'rotateY(' + gamma * 3 + 'deg)';
-	} else {
-		flag = true;
-	}
-})
+// 陀螺仪等明天配个webpack再写~
