@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="http://www.elearnmooc.com/user/userInfoDate?varname=websiteInfo"></script>
   <title>jsonp原理</title>
+  <script type="text/javascript">
+    //原生的实现方式
+    // let script = document.createElement('script');
+    // script.src = 'http://www.elearnmooc.com/user/userInfoDate?varname=websiteInfo';
+    // document.getElementsByTagName('head')[0].appendChild(script);
+    setTimeout(() => {
+      console.log(websiteInfo)
+    }, 1000);
+  </script>
 </head>
+
 <body>
-  
+
 </body>
+
 </html>

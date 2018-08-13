@@ -17,14 +17,11 @@ http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html
   若A：baike.baidu.com, B:image.baidu.com;
   B想访问A的Cookie，则设置A的document.domain=‘.baidu.com’;
   若想相互访问，则都设document.domain=‘.baidu.com’;
-### 5.可以js加载个图片，用Date.now()取两个时间相减测网速；
-### 6.css攻击XXS之类的；
-### 7.突破同源策略：
+### 5.突破同源策略：
 #### html标签：\<img>、\<script>（jsonp，只能get请求）、\<iframe>、\<link>（background）;
-### 8.jsonp原理：利用\<script>的跨域能力，用参数 把数据带回来；
-### 9.border-img
+### 6.border-img
 
-## 四、window.postMessage，允许跨窗口通信，不论是否同源；
+## 四、window.postMessage，允许跨窗口通信，不论是否同源；详见demo5、demo6
 #### 父窗口：http://aaa.com,子窗口：http://bbb.com:8888
 #### 父窗口打开子窗口var A = window.open(‘http://bbb.com:8888','title');
 #### 父窗口向特定子窗口发消息：
@@ -40,10 +37,17 @@ https://www.jb51.net/article/102767.htm
 ## 六、CORS(跨资源分享)，跨源AJAX请求的根本方法，允许任何类型的请求；
 
 ## 七、CSS远程攻击漏洞
-### 1.xss攻击
+### 1.xss攻击，详见demo3
 ### 2.可以用befor、after、阴影等减少dom的使用，使网站加载速度变快。GPU
   一个dom有一百个事件，所以就很慢。
 
 ## 八、语义化
 #### 标签语义化
 #### logo用h1标签包一下
+
+## 九、jsonp原理，详见demo4
+https://blog.csdn.net/hansexploration/article/details/80314948
+### 利用\<script>的跨域能力，用参数 把数据带回来；
+#### 1.\<script>标签动态生成是因为啥呢；
+#### 2.取回来的数据和原网站不同，可能是因为Referer不同（Referer可以记录访问的来源，统计访问量，可以用来防盗链；客户端用js不能篡改Referer，用一些插件什么的可以达到伪造的目的）；
+#### 3.数据需要等js执行完毕才能返回。

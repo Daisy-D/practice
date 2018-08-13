@@ -3,5 +3,3 @@
 ### XSS攻击（未实现）：demo3.html
 ### jsonp原理：demo4.html
 ### iframe通信：demo5.html
-### html语义化：demo6.html
-### 伪类元素：demo7.html

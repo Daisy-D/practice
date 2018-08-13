@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>iframe通信</title>
 </head>
+
 <body>
-  
+  <div>我是父页面</div>
+  <iframe src="http://0.0.0.0:7200/oneday/demo6.html" frameborder="0"></iframe>
+  <script>
+    setTimeout(() => {//不能直接发送，那时候子页面还没创建好
+      window.frames[0].postMessage("是我啦", "http://0.0.0.0:7200/oneday/demo6.html")
+    }, 1000);
+  </script>
 </body>
+
 </html>
