@@ -1,4 +1,5 @@
 var box = document.getElementById("box")
+var audio = document.getElementById("music")
 var rectangle = box.getElementsByTagName("div")
 var rectangleLength = rectangle.length
 var rectangleWidth = rectangle[0].clientWidth
@@ -8,6 +9,16 @@ for (var i = 0; i < rectangleLength; i++) {
 	rectangle[i].style.background = 'url(./img/p' + (i + 1) + '.png) no-repeat'
 	rectangle[i].style.transform = 'rotateY(' + angle * i + 'deg) translateZ(' + distance + 'px)'
 }
+
+$('#playAudio').on('tap',function(){
+	if(audio.paused){
+		audio.play()
+		$('#playAudio').text('🐵')
+	}else{
+		audio.pause()
+		$('#playAudio').text('🙉')
+	}
+})
 
 var startX = 0,
 	moveX = 0,
