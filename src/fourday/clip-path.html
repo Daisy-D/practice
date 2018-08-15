@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>clip-path</title>
+  <style>
+    .img1{
+      width:300px;
+      height:300px;
+      clip-path:inset(10% 10% 10% 10% round 10% 50% 10% 50%);/*前面四个值是外面裁剪的大小，可以是负值；后面是裁剪的border-radius*/
+      transition: 1s all;/* 路径点相同，使用transition过渡动画才好用，否则无过渡 */
+    }
+    .img1:hover{
+      clip-path:inset(5% round 50% 50% 50% 50%);
+    }
+    .img2{
+      width:300px;
+      height:300px;
+      clip-path:polygon(50% 0, 100% 50%, 50% 100%, 0 50%);/* 坐标点 */
+      transition: 1s all;
+    }
+    .img2:hover{
+      clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  </style>
+</head>
+<body>
+    <img class="img1" src="./img/haimian.jpeg">
+    <img class="img2" src="./img/tx1.jpeg">
+</body>
+</html>
