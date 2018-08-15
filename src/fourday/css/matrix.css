@@ -1,0 +1,61 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 50px 20px 20px;
+  height: 100%;
+  background: #ffffff;
+  overflow: scroll;
+}
+
+.go-back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: none;
+  color: #333333;
+}
+
+.lab {
+  opacity: 1;
+  height: 100px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #a1a1a1;
+  transition: 0.3s all ease-in-out;
+}
+
+.lab.active {
+  height: calc(100% - 20px);
+  opacity: 1;
+}
+
+.lab.other {
+  height: 0;
+  opacity: 0;
+}
+.logo{
+  width:40px;
+  position:absolute;
+  top:31px;
+  left:50%;
+  transform:translateX(100%);
+  opacity: 0;
+  transition: 0.1s all ease-in-out;
+}
+.logo.active {
+  width:40px;
+  position:absolute;
+  top:31px;
+  left:50%;
+  opacity: 1;
+  transform:translateX(-50%);
+  transition: 0.3s 0.3s all ease-in-out;
+}
