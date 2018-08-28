@@ -25,3 +25,46 @@ function New(F){
   jQuery.fn.init.prototype = jQuery.fn
 })(window);
 ```
+## 三、$.fn扩展
+```javascript
+jQuery.fn.extend({
+  a:function(){
+    console.log(123)
+  },
+  b:13
+})
+$('').a() //123
+$.b //13
+```
+## 四、链式调用是在函数最后一步return了this
+## 五、函数的重载
+```javascript
+function addMethod(obj,name,f){
+ var old = obj[name]
+ //console.log(1,old)
+ obj[name] = function() {
+  //console.log(2, f,f.length, arguments,arguments.length)
+  if(f.length === arguments.length){
+    return f.apply(this,arguments)
+  }else{
+    return old.apply(this,arguments)
+  }
+ }  
+}
+var people = {name:["张三","李四"]}
+var find0 = function(){
+ return this.name
+}
+var find1 = function(name){
+ var arr = this.name;
+ for(var i=0; i<=arr.length; i++){
+  if(arr[i]==name){
+    return arr[i] + '在' + i + '位'
+  }
+ }
+}
+addMethod(people,'find',find0)
+addMethod(people,'find',find1)
+//console.log(people)
+console.log(people.find())
+```
