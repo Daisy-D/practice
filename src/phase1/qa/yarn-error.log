@@ -1,0 +1,58 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add Chromium --save-dev
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/go/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.4.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/Chromium: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:64202:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:137468:22)
+      at emitTwo (events.js:125:13)
+      at Request.emit (events.js:213:7)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:138440:10)
+      at emitOne (events.js:115:13)
+      at Request.emit (events.js:210:7)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:138362:12)
+      at Object.onceWrapper (events.js:314:30)
+      at emitNone (events.js:110:20)
+
+npm manifest: 
+  {
+    "name": "qa",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "karma init",
+      "unit": "karma start"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "backstop": "^1.0.1",
+      "backstopjs": "^3.5.9",
+      "chromium": "^1.0.2",
+      "jasmine-core": "^3.2.1",
+      "karma": "^3.0.0",
+      "karma-coverage": "^1.1.2",
+      "karma-jasmine": "^1.1.2",
+      "karma-phantomjs-launcher": "^1.0.4",
+      "phantom": "^6.0.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
