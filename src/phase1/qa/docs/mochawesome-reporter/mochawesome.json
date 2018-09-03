@@ -1,23 +1,79 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2018-08-29T16:45:46.129Z",
-    "end": "2018-08-29T16:45:46.132Z",
-    "duration": 3,
-    "testsRegistered": 0,
-    "passPercent": null,
-    "pendingPercent": null,
+    "start": "2018-09-01T13:42:42.632Z",
+    "end": "2018-09-01T13:42:42.648Z",
+    "duration": 16,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
     "passPercentClass": "success",
-    "pendingPercentClass": "success"
+    "pendingPercentClass": "danger"
   },
-  "suites": false,
+  "suites": {
+    "uuid": "b6abc472-af86-482b-98c2-d7c749514db3",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "b2f019d6-e289-4f62-a2cf-2bfa368a110f",
+        "title": "node接口测试",
+        "fullFile": "/Users/daixiaolu/Utopia/practice/src/phase1/qa/service/router.spec.js",
+        "file": "/service/router.spec.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "test接口测试文档",
+            "fullTitle": "node接口测试 test接口测试文档",
+            "timedOut": false,
+            "duration": 1,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "// this.timeout(15000);\nrequest().get('/test')\n  .expect(\"Content-Type\", /json/)\n  .expect(200)\n  .expect(function (err, res) {\n    if (res.data == \"hellp wo\") {\n      done()\n    } else {\n      done(err)\n    }\n  })",
+            "err": {},
+            "isRoot": false,
+            "uuid": "a958d847-e767-4f5d-bb06-5e79b646db84",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "a958d847-e767-4f5d-bb06-5e79b646db84"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 1,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
   "copyrightYear": 2018
 }

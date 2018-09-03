@@ -3,8 +3,8 @@
   "viewports": [
     {
       "label": "phone",
-      "width": 414,
-      "height": 736
+      "width": 375,
+      "height": 667
     },
     {
       "label": "tablet",
