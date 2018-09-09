@@ -1,4 +1,4 @@
-// // supervisor自动刷新；supervisor app.js启动（之前是node app.js启动）
+// // supervisor不用重新执行，直接刷新；supervisor app.js启动（之前是node app.js启动）
 // var express = require('express');
 // var app = express();
 
@@ -14,8 +14,8 @@
 // })
 
 var express = require('express');
-var bodyParser = require('body-parser');
 var app = express();
+var bodyParser = require('body-parser');
 // 创建 application/x-www-form-urlencoded 编码解析
 var urlencodedParser = bodyParser.urlencoded({
   extended: false
