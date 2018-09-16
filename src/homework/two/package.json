@@ -5,17 +5,25 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel": "babel app.es6 -o app.js"
+    "babel1": "babel app.es6 -o app.js",
+    "babel2": "babel controller/indexController.es6 -o controller/indexController.js",
+    "babel3": "babel controller/initController.es6 -o controller/initController.js",
+    "babel4": "babel config/config.es6 -o config/config.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "co": "^4.6.0",
     "koa": "^2.5.3",
-    "koa-simple-router": "^0.2.0"
+    "koa-simple-router": "^0.2.0",
+    "koa-static": "^5.0.0",
+    "koa-swig": "^2.2.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
   }
 }
