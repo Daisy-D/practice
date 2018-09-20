@@ -22,9 +22,25 @@ class CountryController extends Controller
             ->limit($pagination->limit)
             ->all();
 
-        return $this->render('index', [
-            'countries' => $countries,
-            'pagination' => $pagination,
-        ]);
+        $array = array();
+        $array['msg'] = 'ok';
+        $array['data'] = array();
+        foreach ($countries as $row) {
+            array_push($array['data'], array('code' => $row['code'], 'name' => $row['name'], 'population' => $row['population']));
+        }
+        return json_encode($array);
+            // return json_encode($countries);
+
+            // $array = array();
+            // foreach ($attributes as $row) {
+            //     array_push($array, array('name' => $row['name'], 'code' => $row['code'], 'population' => $row['population']));
+            // }        
+            // // $array['data'] = 1;
+            // // $array['data2'] = 2;
+            // // $array['data3'] = \yii\helpers\Json::encode($countries);
+            // return json_encode($array);
+            //     // return json_encode($countries);
+
+
     }
 }
