@@ -2,11 +2,27 @@
 {% block title %} my page {% endblock %}
 {% block head %}
 {% parent %}
-  <link rel="stylesheet" type="text/css" href="../css/index.css">
-  <script src="../js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/index.css">
 {% endblock %}
 {% block content %}
 <div>
-  <h1>hello swig</h1>
+  <div class="hand" id="thumb">👍</div>
+  <span class="hide" id="animation">+1</span>
 <div>
+<script src="../js/indexadd.js"></script>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/systemjs/0.20.18/system.js"></script>
+<script>
+System.import('../js/index.js').then(function (m) {
+  $.extend({
+    thumb: m.default
+  })
+  callBack();
+});
+
+function callBack() {
+  var run = new $.thumb(0, $('#thumb'));
+  run.clickAction();
+}
+</script>
 {% endblock %}

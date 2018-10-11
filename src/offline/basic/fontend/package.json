@@ -9,7 +9,8 @@
     "babel2": "babel controller/indexController.es6 -o controller/indexController.js",
     "babel3": "babel controller/initController.es6 -o controller/initController.js",
     "babel4": "babel models/indexModel.es6 -o models/indexModel.js",
-    "babel5": "babel config/config.es6 -o config/config.js"
+    "babel5": "babel public/js/index.es6 -o public/js/index.js",
+    "babel6": "babel public/js/thumb.es6 -o public/js/thumb.js"
   },
   "author": "",
   "license": "ISC",

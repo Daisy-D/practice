@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _indexmodel = require('../models/indexmodel.js');
+var _indexModel = require('../models/indexModel.js');
 
-var _indexmodel2 = _interopRequireDefault(_indexmodel);
+var _indexModel2 = _interopRequireDefault(_indexModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53,7 +53,7 @@ var indexController = {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                indexM = new _indexmodel2.default();
+                indexM = new _indexModel2.default();
                 _context2.next = 3;
                 return indexM.updateNum();
 
