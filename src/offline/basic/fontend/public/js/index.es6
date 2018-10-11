@@ -1,4 +1,3 @@
-console.log(11111)
 class PraiseButton {
     constructor(num, element) {
         this.num = num;

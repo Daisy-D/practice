@@ -51,6 +51,6 @@ class realCon extends Conmysql
     $this->updateData($sql);
   }
 }
-$praiseC = new realCon('127.0.0.1', 'root', 'password', 'db_good');
+$praiseC = new realCon('127.0.0.1', 'root', 'youyou', 'db_good');
 $praiseC->updateRealData();
 ?>
