@@ -42,12 +42,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var app = new _koa2.default();
 
 _initController2.default.init(app, _koaSimpleRouter2.default);
+console.log(999);
+console.log(22, _config2.default.get('viewsDir'));
+
 app.context.render = _co2.default.wrap((0, _koaSwig2.default)({
-  root: _config2.default.get('viewDir'),
+  root: _config2.default.get('viewsDir'),
   autoescape: true,
   cache: 'memory', // disable, set to false
   ext: 'html'
 }));
-
 app.use((0, _koaStatic2.default)(_config2.default.get('staticDir')));
 app.listen(_config2.default.get('port'));

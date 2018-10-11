@@ -10,8 +10,9 @@ import initController from './controller/initController.js';
 const app = new Koa();
 
 initController.init(app, router);
+
 app.context.render = co.wrap(render({
-  root: CONFIG.get('viewDir'),
+  root: CONFIG.get('viewsDir'),
   autoescape: true,
   cache: 'memory', // disable, set to false
   ext: 'html'

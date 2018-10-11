@@ -2,3 +2,5 @@ node_modules
 src/offline/yii-application/
 
 \.DS_Store
+
+src/homework/praise-by-koa

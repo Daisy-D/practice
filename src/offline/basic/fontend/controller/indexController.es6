@@ -1,4 +1,4 @@
-import indexModel from '../models/indexmodel.js'
+import indexModel from '../models/indexModel.js'
 const indexController = {
   index() {
     return async (ctx, next) => {

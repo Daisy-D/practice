@@ -8,13 +8,18 @@
     "babel1": "babel app.es6 -o app.js",
     "babel2": "babel controller/indexController.es6 -o controller/indexController.js",
     "babel3": "babel controller/initController.es6 -o controller/initController.js",
-    "babel4": "babel config/config.es6 -o config/config.js"
+    "babel4": "babel models/indexModel.es6 -o models/indexModel.js",
+    "babel5": "babel config/config.es6 -o config/config.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-polyfill": "^6.26.0",
-    "babel-register": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  },
+  "dependencies": {
     "koa": "^2.3.0",
     "koa-request": "^1.0.0",
     "koa-route": "^3.2.0",
@@ -23,12 +28,8 @@
     "qs": "^6.5.1",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
-    "supertest": "^3.0.0"
-  },
-  "dependencies": {
+    "supertest": "^3.0.0",
     "axios": "^0.16.2",
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
     "co": "^4.6.0",
     "jasmine-core": "^2.8.0",
     "karma": "^1.7.1",
